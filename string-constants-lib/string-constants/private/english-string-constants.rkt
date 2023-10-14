@@ -649,6 +649,9 @@ please adhere to these guidelines:
   ;; the constant above shows up in the popup menu item in the bottom of
   ;; the drracket window; controls the line numbers on each line in the definitions;
   ;; used in a checkable menu item
+  ;; Capitalized for appearance in a menu item
+  (show-indent-guides/menu "Show Indent &Guides")
+  (hide-indent-guides/menu "Hide Indent &Guides")
   (reflow-paragraph-maximum-width "Maximum width when reflowing paragraphs")
   (maximum-char-width-guide-pref-check-box "Maximum character width guide")
   (hide-column-width-guide "Hide Column Width Guide for Files with ~a Columns")
@@ -1229,6 +1232,12 @@ please adhere to these guidelines:
   (reindent-menu-item-label "&Reindent")
   (reindent-all-menu-item-label "Reindent &All")
   (semicolon-comment-out-menu-item-label "&Comment Out with Semicolons")
+  ;; the ~a is filled with the characters that'll be used to comment out a line,
+  ;; inserted at the start of the line
+  (comment-out-with-line-start "&Comment Out with “~a”")
+  ;; the two '~a's are filled with the characters that'll be used to comment out
+  ;; the start and end of a region
+  (comment-out-with-region "&Comment Out with “~a” and “~a”")
   (box-comment-out-menu-item-label "Comment Out with a &Box")
   (uncomment-menu-item-label "&Uncomment")
 

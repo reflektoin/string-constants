@@ -488,6 +488,8 @@
  (hide-line-numbers/menu "Zeilen&nummern ausblenden")
 
  (show-line-numbers-in-definitions "Alle Zeilennummern in Definitionen einblenden") ;; shows up in the popup menu item in the bottom of the drracket window; controls the line numbers on each line in the definitions; used in a checkable menu item
+ (show-indent-guides/menu "Einrückungs-Hilfe einblenden")
+ (hide-indent-guides/menu "Einrückungs-Hilfe ausblenden")
  (reflow-paragraph-maximum-width "Maximalbreite beim Umbruch von Absätzen")
  (maximum-char-width-guide-pref-check-box "Richtschnur für maximale Zeichenbreite")
  (hide-column-width-guide "Richtschnur für Spaltenbreite für Dateien mit ~a Spalten einblenden")
@@ -1043,6 +1045,12 @@
  (reindent-menu-item-label "&Einrücken")
  (reindent-all-menu-item-label "&Alles einrücken")
  (semicolon-comment-out-menu-item-label "Mit &Semikolon auskommentieren")
+ ;; the ~a is filled with the characters that'll be used to comment out a line,
+ ;; inserted at the start of the line
+ (comment-out-with-line-start "&Auskommentieren mit “~a”")
+ ;; the two '~a's are filled with the characters that'll be used to comment out
+ ;; the start and end of a region
+ (comment-out-with-region "&Auskommentieren mit “~a” und “~a”")
  (box-comment-out-menu-item-label "Mit &Kommentar-Kasten auskommentieren")
  (uncomment-menu-item-label "Einkommentieren")
 
